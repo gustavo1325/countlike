@@ -1,0 +1,34 @@
+<?php
+function countlikes_schema() {
+  $schema['countlikes'] = array(
+    // Example (partial) specification for table "node".
+    'description' => 'The table count.',
+    'fields' => array(
+      'id' => array(
+        'description' => 'The primary identifier for a node.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+
+      'id_post' => array(
+        'description' => 'id del post.',
+        'type' => 'varchar',
+        'length' => 10,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+     'count' => array(
+        'description' => 'numero de me gusta.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+    ),
+    'primary key' => array(
+      'id',
+    ),
+  );
+  return $schema;
+}

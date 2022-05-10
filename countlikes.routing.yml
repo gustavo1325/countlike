@@ -1,0 +1,18 @@
+countlikes.content:
+  path: '/node/countlikes'
+  defaults:
+    _controller: '\Drupal\countlikes\Controller\countlikesController::content'
+    _title: 'ajax likes'
+  methods: [POST]
+  requirements:
+    _permission: 'access content'
+
+
+countlikes.numberlikes:
+  path: '/numberlikes'
+  defaults:
+    _controller: '\Drupal\countlikes\Controller\countlikesController::numberlikes'
+    _title: 'ajax numberlikes'
+  methods: [POST]
+  requirements:
+    _permission: 'access content'
